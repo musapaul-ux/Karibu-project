@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Sales - Karibu Groceries LTD</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Karibu Groceries</h2>
+        <a href="manager_dashboard.html">Dashboard</a>
+        <a href="procurement.html">Procurement</a>
+        <a href="sales.html">Sales</a>
+        <a href="credit_sales.html" class="active">Credit Sales</a>
+        <a href="stock.html">Stock</a>
+        <a href="login.html" class="logout">Logout</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <h1>Record Credit Sale</h1>
+        <p>Record produce taken on credit by trusted buyers</p>
+
+        <form id="creditForm">
+
+            <!-- Buyer Information Card -->
+            <div class="form-card">
+                <h2>Buyer Information</h2>
+
+                <label>Buyer Name</label>
+                <input type="text" id="buyerName" required>
+
+                <label>National ID (NIN)</label>
+                <input type="text" id="buyerNIN" maxlength="14" required>
+
+                <label>Location</label>
+                <input type="text" id="buyerLocation" required>
+
+                <label>Contact</label>
+                <input type="text" id="buyerContact" required>
+
+            </div>
+
+            <!-- Produce Information Card -->
+            <div class="form-card">
+                <h2>Produce Information</h2>
+
+                <label>Produce Name</label>
+                <select id="produceName" onchange="loadStock()">
+                    <option value="">-- Select Produce --</option>
+                    <option value="Beans">Beans</option>
+                    <option value="Maize">Maize</option>
+                    <option value="Cow Peas">Cow Peas</option>
+                    <option value="G-nuts">G-nuts</option>
+                    <option value="Soybeans">Soybeans</option>
+                </select>
+
+                <label>Produce Type</label>
+                <input type="text" id="produceType" required>
+
+                <label>Available Stock (KG)</label>
+                <input type="text" id="availableStock" disabled>
+
+                <label>Tonnage (KG)</label>
+                <input type="number" id="tonnage" required>
+
+                <label>Date of Dispatch</label>
+                <input type="date" id="dispatchDate" required>
+
+            </div>
+
+            <!-- Credit Details Card -->
+            <div class="form-card">
+                <h2>Credit Details</h2>
+
+                <label>Amount Due (UGX)</label>
+                <input type="number" id="amountDue" required>
+
+                <label>Sales Agent Name</label>
+                <input type="text" id="agentName" required>
+
+                <label>Due Date</label>
+                <input type="date" id="dueDate" required>
+
+                <button type="submit" class="submit-btn">Save Credit Sale</button>
+            </div>
+
+        </form>
+
+        <p id="creditMessage" class="message"></p>
+
+    </div>
+
+    <script src="../assets/js/credit.js"></script>
+
+</body>
+</html>

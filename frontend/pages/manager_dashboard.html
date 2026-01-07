@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Dashboard - Karibu Groceries LTD</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Karibu Groceries</h2>
+        <a href="manager_dashboard.html" class="active">Dashboard</a>
+        <a href="procurement.html">Procurement</a>
+        <a href="sales.html">Sales</a>
+        <a href="credit_sales.html">Credit Sales</a>
+        <a href="stock.html">Stock</a>
+        <a href="login.html" class="logout">Logout</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <header>
+            <h1>Manager Dashboard</h1>
+            <p>Welcome, Manager 👋</p>
+        </header>
+
+        <!-- Dashboard Overview Cards -->
+        <div class="cards">
+
+            <div class="card">
+                <h3>Total Stock (KG)</h3>
+                <p id="totalStock">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Today’s Sales (UGX)</h3>
+                <p id="dailySales">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Pending Credit (UGX)</h3>
+                <p id="pendingCredit">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Branches</h3>
+                <p>Maganjo & Matugga</p>
+            </div>
+
+        </div>
+
+    </div>
+
+<script src="../assets/js/dashboard.js"></script>
+
+</body>
+</html>

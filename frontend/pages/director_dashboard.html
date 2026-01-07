@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Director Dashboard - Karibu Groceries LTD</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Karibu Groceries</h2>
+        <a href="director_dashboard.html" class="active">Dashboard</a>
+        <a href="login.html" class="logout">Logout</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <header>
+            <h1>Director Dashboard</h1>
+            <p>Welcome, Mr. Orban (Director)</p>
+        </header>
+
+        <!-- Summary Cards -->
+        <div class="cards">
+
+            <div class="card">
+                <h3>Total Sales (All Branches)</h3>
+                <p id="totalSales">0 UGX</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Tonnage Sold</h3>
+                <p id="totalTonnage">0 KG</p>
+            </div>
+
+            <div class="card">
+                <h3>Outstanding Credit</h3>
+                <p id="totalCredit">0 UGX</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Branches</h3>
+                <p>2</p>
+            </div>
+        </div>
+
+        <h2>Branch Comparison</h2>
+
+        <table id="branchTable">
+            <thead>
+                <tr>
+                    <th>Branch</th>
+                    <th>Total Sales (UGX)</th>
+                    <th>Tonnage Sold (KG)</th>
+                    <th>Pending Credit (UGX)</th>
+                </tr>
+            </thead>
+            <tbody id="branchTableBody">
+            </tbody>
+        </table>
+
+    </div>
+
+    <script src="../assets/js/director.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales - Karibu Groceries LTD</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Karibu Groceries</h2>
+        <a href="manager_dashboard.html">Dashboard</a>
+        <a href="procurement.html">Procurement</a>
+        <a href="sales.html" class="active">Sales</a>
+        <a href="credit_sales.html">Credit Sales</a>
+        <a href="stock.html">Stock</a>
+        <a href="login.html" class="logout">Logout</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <h1>Record Cash Sale</h1>
+        <p>Record produce sold at your branch</p>
+
+        <form id="salesForm">
+
+            <!-- Sales Information Card -->
+            <div class="form-card">
+                <h2>Sales Details</h2>
+
+                <label>Produce Name</label>
+                <select id="produceName" onchange="loadStock()">
+                    <option value="">-- Select Produce --</option>
+                    <option value="Beans">Beans</option>
+                    <option value="Maize">Maize</option>
+                    <option value="Cow Peas">Cow Peas</option>
+                    <option value="G-nuts">G-nuts</option>
+                    <option value="Soybeans">Soybeans</option>
+                </select>
+
+                <label>Available Stock (KG)</label>
+                <input type="text" id="availableStock" disabled>
+
+                <label>Tonnage Sold (KG)</label>
+                <input type="number" id="tonnageSold" required>
+
+                <label>Amount Paid (UGX)</label>
+                <input type="number" id="amountPaid" required>
+
+            </div>
+
+            <!-- Buyer Information Card -->
+            <div class="form-card">
+                <h2>Buyer Information</h2>
+
+                <label>Buyer Name</label>
+                <input type="text" id="buyerName" required>
+
+                <label>Sales Agent Name</label>
+                <input type="text" id="salesAgent" required>
+
+                <label>Date</label>
+                <input type="date" id="date" required>
+
+                <label>Time</label>
+                <input type="time" id="time" required>
+
+                <button type="submit" class="submit-btn">Record Sale</button>
+            </div>
+
+        </form>
+
+        <p id="salesMessage" class="message"></p>
+
+    </div>
+
+    <script src="../assets/js/sales.js"></script>
+
+</body>
+</html>

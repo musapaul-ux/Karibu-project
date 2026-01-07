@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Overview - Karibu Groceries LTD</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Karibu Groceries</h2>
+        <a href="manager_dashboard.html">Dashboard</a>
+        <a href="procurement.html">Procurement</a>
+        <a href="sales.html">Sales</a>
+        <a href="credit_sales.html">Credit Sales</a>
+        <a href="stock.html" class="active">Stock</a>
+        <a href="login.html" class="logout">Logout</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <h1>Stock Overview</h1>
+        <p>View and monitor stock levels across branches</p>
+
+        <!-- FILTER SECTION -->
+        <div class="stock-filters">
+
+            <label>Branch:</label>
+            <select id="branchFilter" onchange="loadStockTable()">
+                <option value="Maganjo">Maganjo</option>
+                <option value="Matugga">Matugga</option>
+                <option value="All">All Branches</option>
+            </select>
+
+            <input type="text" id="searchStock" placeholder="Search produce..." onkeyup="filterStock()">
+
+        </div>
+
+        <!-- STOCK TABLE -->
+        <table id="stockTable">
+            <thead>
+                <tr>
+                    <th>Produce</th>
+                    <th>Branch</th>
+                    <th>Available Stock (KG)</th>
+                </tr>
+            </thead>
+            <tbody id="stockBody">
+                <!-- Filled dynamically by JavaScript -->
+            </tbody>
+        </table>
+
+    </div>
+
+    <script src="../assets/js/stock.js"></script>
+
+</body>
+</html>
