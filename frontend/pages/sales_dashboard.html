@@ -1,82 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sales Agent Dashboard - Karibu Groceries LTD</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
-</head>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
 
-<body>
-
+  <body>
     <!-- Sidebar -->
     <div class="sidebar">
-        <h2>Karibu Groceries</h2>
-        <a href="sales_dashboard.html" class="active">Dashboard</a>
-        <a href="sales.html">Record Sale</a>
-        <a href="credit_sales.html">Record Credit Sale</a>
-        <a href="stock.html">Stock</a>
-        <a href="login.html" class="logout">Logout</a>
+      <img src="../assets/img/karibu_logo.png" class="logo" />
+      <h2>Karibu Groceries</h2>
+      <a href="sales_dashboard.html" class="active">Dashboard</a>
+      <a href="sales.html">Record Sale</a>
+      <a href="credit_sales.html">Record Credit Sale</a>
+      <a href="stock.html">Stock</a>
+      <a href="login.html" class="logout">Logout</a>
     </div>
 
     <!-- Main Content -->
     <div class="main-content">
+      <header>
+        <h1>Sales Agent Dashboard</h1>
+        <p>Welcome, Sales Agent</p>
+      </header>
 
-        <header>
-            <h1>Sales Agent Dashboard</h1>
-            <p>Welcome, Sales Agent 👋</p>
-        </header>
-
-        <!-- Summary Cards -->
-        <div class="cards">
-
-            <div class="card">
-                <h3>Today's Sales (UGX)</h3>
-                <p id="agentDailySales">0</p>
-            </div>
-
-            <div class="card">
-                <h3>Tonnage Sold Today</h3>
-                <p id="agentTonnageSold">0 KG</p>
-            </div>
-
-            <div class="card">
-                <h3>Credit Issued Today</h3>
-                <p id="agentCreditIssued">0 UGX</p>
-            </div>
-
-            <div class="card">
-                <h3>Your Branch</h3>
-                <p id="agentBranch">Maganjo</p>
-            </div>
-
+      <!-- Summary Cards -->
+      <div class="cards">
+        <div class="card">
+          <h3>Today's Sales (UGX)</h3>
+          <p id="agentDailySales">0</p>
         </div>
 
-        <h2>Quick Actions</h2>
-
-        <div class="quick-actions">
-            <a href="sales.html" class="qa-btn">Record Sale</a>
-            <a href="credit_sales.html" class="qa-btn">Record Credit Sale</a>
-            <a href="stock.html" class="qa-btn">View Stock</a>
+        <div class="card">
+          <h3>Tonnage Sold Today</h3>
+          <p id="agentTonnageSold">0 KG</p>
         </div>
 
-        <h2>Branch Stock Overview</h2>
+        <div class="card">
+          <h3>Credit Issued Today</h3>
+          <p id="agentCreditIssued">0 UGX</p>
+        </div>
 
-        <table id="branchStockTable">
-            <thead>
-                <tr>
-                    <th>Produce</th>
-                    <th>Available Stock (KG)</th>
-                </tr>
-            </thead>
-            <tbody id="branchStockBody">
-                <!-- Filled dynamically -->
-            </tbody>
+        <div class="card">
+          <h3>Your Branch</h3>
+          <p id="agentBranch">Maganjo</p>
+        </div>
+      </div>
+      
+      <h2>Quick Actions</h2>
+      <br>
+      <div class="quick-actions">
+        <button class="action-btn"><a href="sales.html" class="qa-btn">Record Sale</a></button>
+        <button class="action-btn"><a href="credit_sales.html" class="qa-btn">Record Credit Sale</a></button>
+        <button class="action-btn"><a href="stock.html" class="qa-btn">View Stock</a></button>
+      </div>
+      <br>
+
+      <h2 class="section-title">Branch Stock Overview</h2>
+
+      <div class="stock-table-container">
+        <table id="branchStockTable" class="styled-table">
+          <thead>
+            <tr>
+              <th>Produce</th>
+              <th>Available Stock (KG)</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="branchStockBody">
+            <!-- Filled by JS -->
+          </tbody>
         </table>
-
+      </div>
     </div>
 
     <script src="../assets/js/sales_dashboard.js"></script>
-
-</body>
+  </body>
 </html>

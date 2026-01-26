@@ -42,6 +42,7 @@ input {
     border-radius: 5px;
 }
 
+
 button {
     width: 100%;
     padding: 12px;
@@ -103,6 +104,14 @@ button:hover {
     background: #cc0000;
 }
 
+/* styling the logo */
+.logo {
+    width: 120px;
+    margin: 0 auto 15px auto;
+    display: block;
+    border-radius: 8px;
+}
+
 /* MAIN CONTENT */
 .main-content {
     margin-left: 260px;
@@ -117,6 +126,7 @@ button:hover {
 }
 
 .card {
+    margin: 2rem 2px;
     background: #fff;
     padding: 25px;
     width: 22%;
@@ -226,22 +236,136 @@ button:hover {
     border-radius: 5px;
 }
 
-/* STOCK TABLE */
-#stockTable {
+/* IMPROVED STOCK TABLE DESIGN */
+/* .stock-table-container {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.styled-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    font-size: 16px;
+    min-width: 400px;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
 }
 
-#stockTable th, #stockTable td {
-    padding: 12px;
-    border-bottom: 1px solid #ddd;
-    text-align: left;
-}
-
-#stockTable th {
+.styled-table thead tr {
     background: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+} */
+
+/* UNIVERSAL STOCK TABLE STYLE */
+
+.stock-table-container {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    min-width: 500px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
+}
+
+.styled-table thead tr {
+    background: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 14px 18px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background: #f9f9f9;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 3px solid #009879;
+}
+
+/* STOCK STATUS BADGES */
+.status-badge {
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+    min-width: 90px;
+}
+
+.status-good {
+    background: #28a745;
     color: white;
+}
+
+.status-warning {
+    background: #ffc107;
+    color: #000;
+}
+
+.status-danger {
+    background: #dc3545;
+    color: white;
+}
+
+
+/* Status badges */
+.status-badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.status-good {
+    background: #28a745;
+}
+
+.status-warning {
+    background: #ffc107;
+    color: #000;
+}
+
+.status-danger {
+    background: #dc3545;
 }
 
 .low-stock {
@@ -266,5 +390,16 @@ button:hover {
 
 #branchTable th {
     background: #009879;
+    color: white;
+}
+
+/* styling sales dashbord quick buttons */
+.quick-actions {
+    display: flex;
+    justify-items: space-between;
+}
+
+.action-btn{
+    margin-right: 4rem;
     color: white;
 }

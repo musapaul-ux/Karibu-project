@@ -12,11 +12,11 @@ const branchData = [
 
 // Load summary cards
 document.getElementById("totalSales").textContent =
-  summary.totalSales.toLocaleString() + " UGX";
+  "UGX " + summary.totalSales.toLocaleString();
 document.getElementById("totalTonnage").textContent =
   summary.totalTonnage.toLocaleString() + " KG";
 document.getElementById("totalCredit").textContent =
-  summary.totalCredit.toLocaleString() + " UGX";
+  "UGX " + summary.totalCredit.toLocaleString();
 
 // Load branch comparison table
 const tbody = document.getElementById("branchTableBody");
@@ -25,9 +25,9 @@ branchData.forEach((row) => {
   const tr = document.createElement("tr");
   tr.innerHTML = `
         <td>${row.branch}</td>
-        <td>${row.sales.toLocaleString()} UGX</td>
+        <td>UGX ${row.sales.toLocaleString()} </td>
         <td>${row.tonnage.toLocaleString()} KG</td>
-        <td>${row.credit.toLocaleString()} UGX</td>
+        <td>UGX ${row.credit.toLocaleString()} </td>
     `;
   tbody.appendChild(tr);
 });
